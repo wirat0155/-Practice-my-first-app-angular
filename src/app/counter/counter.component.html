@@ -1,0 +1,8 @@
+<button class="btn btn-primary" (click)="onPressButton()">Display details</button>
+<p *ngIf="isDisplay">Secret value = wirat</p>
+
+<div 
+*ngFor="let logItem of log; let i = index"
+[ngClass]="{'text-white': i > 4 ? true : false}"
+[ngStyle]="{'background-color': i > 4 ? 'blue' : 'transparent'}"
+>{{ logItem }}</div>
